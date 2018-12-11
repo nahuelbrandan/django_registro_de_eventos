@@ -1,0 +1,1 @@
+# django_registro_de_eventos
