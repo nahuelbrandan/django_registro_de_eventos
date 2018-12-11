@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="Home" content="width=device-width, initial-scale=1.0">
+
+    <title> Home </title>
+</head>
+
+<body>
+    <h1> Bienvenidos! </h1>
+
+    <ul>
+        {% for evento in eventos %}
+        <div>
+            <li>{{ evento.nombre}} {{ evento.fecha }} {{ evento.pais }}</li>
+        </div>
+       {% endfor %}
+    </ul>
+
+</body>
+</html>

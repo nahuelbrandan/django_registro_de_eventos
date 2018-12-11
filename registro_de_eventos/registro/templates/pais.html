@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title> Pais </title>
+</head>
+
+<body>
+    <form action="/pais/" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
