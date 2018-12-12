@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <title> Pais </title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
+    {% load crispy_forms_tags %}
     <form action="/pais/" method="POST">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-success" value="Agregar">
     </form>
 </body>
+
 </html>

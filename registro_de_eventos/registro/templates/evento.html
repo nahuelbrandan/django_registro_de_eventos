@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <title> Evento </title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-    <form action="/evento/" method="POST">
+    {% load crispy_forms_tags %}
+    <form action="/evento/" method="POST" novalidate>
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Agregar evento</button>
+    </form>
+
+    <form action="/pais" method="get">
+        <button type="submit" class="btn btn-primary">Agregar nuevo pais</button><br>
     </form>
 </body>
+
 </html>

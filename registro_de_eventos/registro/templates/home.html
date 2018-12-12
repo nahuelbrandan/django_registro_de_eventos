@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
-    <meta name="Home" content="width=device-width, initial-scale=1.0">
-
     <title> Home </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
     <h1> Bienvenidos! </h1>
 
-    <ul>
-        {% for evento in eventos %}
-        <div>
-            <li>{{ evento.nombre}} {{ evento.fecha }} {{ evento.pais }}</li>
-        </div>
-       {% endfor %}
-    </ul>
+    <form action="/evento" method="get">
+        <button type="submit" class="btn btn-primary">Agregar evento</button><br>
+    </form>
+
+    <div class="container">
+        <h2> Esta es la lista de eventos agendados: </h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre evento</th>
+                    <th>Fecha y hora</th>
+                    <th>Pais</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for evento in eventos %}
+                <tr>
+                    <td>{{ evento.nombre}}</td>
+                    <td>{{ evento.fecha }}</td>
+                    <td>{{ evento.pais  }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
 </body>
+
 </html>
