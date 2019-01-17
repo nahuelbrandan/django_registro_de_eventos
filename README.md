@@ -23,4 +23,6 @@ Utilizo python 3.7.1 y Django 2.1.4
 
 * Ejecutamos el script primera_vez para setear las configuraciones iniciales: *./primera_vez.sh*
 
+* Ejecutamos *python manage.py migrate* para cargar los modelos creados.
+
 * Corremos el proyecto con: *python manage.py runserver* y vamos a nuestro navegador e ingresamos a la url: *http://127.0.0.1:8000/*.
